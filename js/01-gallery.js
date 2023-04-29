@@ -25,7 +25,7 @@ let instance;
 
 function openModal(event) {
   event.preventDefault();
-  if (event.target === event.currentTarget) return;
+  if (event.target.nodeName !== 'IMG') return;
   const options = {
     onShow: (instance) => {
       document.addEventListener("keydown", closeModal);
